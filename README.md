@@ -7,7 +7,9 @@ Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3589635634
 ## Features
 ### Palette Banks
 A palette bank is a custom alternate set of palettes. It works as a solution to mod palette compatibility and convenience.
-They can be used by creating a folder prefixed with `bank-` in your mod's palettes folder. (For example, our region palettes use bank-incan). To use palettes from the bank in-game, add the **IT_PaletteSettings** effect into the room and enter the bank name (EXCLUDING prefix) in the Bank field. Save and reload the room (or press T) for changes to apply.
+They can be used by creating a folder prefixed with `bank-` in your mod's palettes folder. (For example, our region palettes use bank-incan).
+
+To use palettes from the bank in-game, add the **IT_PaletteSettings** effect into the room and enter the bank name (EXCLUDING `bank-` prefix) in the Bank field. Save and reload the room (or press T) for changes to apply.
 
 Example - if a custom palette in present in your bank folder with the name `palette0.png`, the game will use that palette in the bank rather than the vanilla palette0. This also works for effect colours, copy the default `effectcolors.png` into your bank folder and edit as you wish. (Be sure to toggle the "Effect A/B" fields in IT_PaletteSettings)
 
@@ -16,17 +18,16 @@ IncanTools adds means of implementing custom region properties. Custom region pr
 - `lightrodColor: <color>` - changes colour of SSLightRods
 - `overrideSSMusic: <string>` - overrides the song for SSMusic 
 - `SSBroken: <float>` - overrides default SSBroken value for SuperStructureFuses (default is full broken, so this is useful for iterator regions!)
-- `rotImmunity: <bool` - grants a region sentient rot immunity
+- `rotImmunity: <bool>` - grants a region sentient rot immunity
 - **[DISABLED]** `oneWayWarp: <bool>` - forces player-created warps in the region to be single-use, like in Ancient Urban. This was once implemented, but is currently disabled. sorry!
-A tutorial for implementing your own properties may be available in the future.
 
 ### Devtools Changes
 IncanTools adds three new keybinds to devtools:
 - **T** - reload room/light palettes and fullscreen effects
 - **Y** - reload placed objects*
-- **/** - increase karma/ripple
+- **/** - increase karma/ripple (wraps at maximum)
 
-*Y destroys and readds the entities corresponding to certain placed objects in the room. Particularly useful for placed objects that you need to reload the room to see in-game and adjust. Currently only the following objects are supported:
+*Y destroys and re-adds the entities corresponding to certain placed objects in the room. Particularly useful for placed objects that you need to reload the room to see in-game and adjust. Currently only implemented for the following objects:
 - LightFixture
 - SuperStructureFuses
 - SSLightRod
@@ -35,3 +36,9 @@ IncanTools adds three new keybinds to devtools:
 ### Other
 Other minor changes / additions include:
 - "No threat drone vol" slider controls volume for threat theme preview in sound page (it's nice to finally silence that when doing sounds if your region has a threat theme!)
+
+### TODO / To Be Considered
+Here are features we are considering in the future:
+- Global palette bank override region property
+- Reload placed objects button (Y) to actually reload every single placed object in the room automatically (slower in-game, but more versatile.)
+- Region properties to prevent Weaver from closing important portals
