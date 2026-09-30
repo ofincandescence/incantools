@@ -1,4 +1,7 @@
-A dependency mod for Of Incandescence's regions which also happens to contain some useful features. **NOTE** - This is currently **VERY experimental** and will be filled with bugs! It is not designed for others to use at this moment, so suggestions will not be taken. Bug reports are appreciated though. Currently not much is included, but more may be added in the future.
+A dependency mod for Of Incandescence's regions which also happens to contain some useful features. This mod is not exactly designed for others to use, though you are free to - there is just no ensuring the mod will always be stable, particularly following Rain World updates.
+
+NOTE - This is currently VERY experimental and will be filled with bugs! As mentioned, this mod is mostly for Incandescence, so suggestions will not be taken. Bug reports are appreciated though. Currently not much is included, but more may be added in the future.
+
 Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3589635634
 
 ## Features
